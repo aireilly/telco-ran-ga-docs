@@ -1,4 +1,5 @@
 FROM registry.access.redhat.com/ubi8/ubi-init
+RUN yum update
 RUN yum -y install httpd; yum clean all; systemctl enable httpd;
 RUN echo "Successful Web Server Test - again, hi!" > /var/www/html/index.html
 RUN yum install zip unzip -y
