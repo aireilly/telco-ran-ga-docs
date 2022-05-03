@@ -1,6 +1,6 @@
 FROM registry.access.redhat.com/ubi8/ubi-init
 RUN yum -y install httpd; yum clean all; systemctl enable httpd;
-RUN echo "Successful Web Server Test" > /var/www/html/index.html
+RUN echo "Successful Web Server Test - Hi!" > /var/www/html/index.html
 RUN yum install zip unzip -y
 ADD preview-docs.zip /var/www/html/
 RUN unzip -o /var/www/html/preview-docs.zip 
